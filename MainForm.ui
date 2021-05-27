@@ -92,13 +92,6 @@
       </column>
      </widget>
     </item>
-    <item>
-     <widget class="QLineEdit" name="leName">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="sbMainForm"/>
