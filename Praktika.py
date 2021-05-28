@@ -10,13 +10,13 @@ class TABook(qw.QMainWindow):  # создание класса TABook от кл�
         super().__init__()  # вызов конструктора родителя
         uic.loadUi('MainForm.ui', self)  # конвертация разметки формы (ui) в поля и методы моего класса
         self.ad = TfmCh()  # Создаем форму для изменений
-        self.f_add = TfmAdd()
-        self.f_add.tv = self.twBook
+        self.f_add = TfmAdd()  # Создаем форму для добавления записи
+        self.f_add.tv = self.twBook  # Сохранение записи в основном окне
 
         self.acAdd.triggered.connect(self.ev_add)  # связывание сигнала действия-добавления с моим слотом
-        self.twBook.itemSelectionChanged.connect(self.ev_sel)
-        self.acUpd.triggered.connect(self.ev_upd)
-        self.acDel.triggered.connect(self.ev_del)
+        self.twBook.itemSelectionChanged.connect(self.ev_sel)    # связывание сигнала выбора записи с моим слотом
+        self.acUpd.triggered.connect(self.ev_upd)  # связывание сигнала действия-изменения с моим слотом
+        self.acDel.triggered.connect(self.ev_del)  # связывание сигнала действия-удаления с моим слотом
 
         con = ql.connect("AddressBook.db")  # подключение к БД
 
@@ -27,8 +27,8 @@ class TABook(qw.QMainWindow):  # создание класса TABook от кл�
 
             self.twBook.clear()  # очистка виджета-списка
 
-            colsWidth = (0, 120, 130, 120, 200)  # картеж ширины столбцов
-            for i in range(5):
+            colsWidth = (0, 70, 160, 120, 200)  # картеж ширины столбцов
+            for i in range(5):  # цикл выборки (по элементам списка)
                 self.twBook.setColumnWidth(i, colsWidth[i])  # задание ширины столбцов
 
             for rec in recs:  # цикл по результатам выборки (по элементам списка)
@@ -44,13 +44,13 @@ class TABook(qw.QMainWindow):  # создание класса TABook от кл�
             con.close()  # отключение от БД
 
     def ev_add(self):  # слот для сигнала действия-добавления
-        self.f_add.leId.setText('')
-        self.f_add.leName.setText('')
-        self.f_add.leFamily.setText('')
-        self.f_add.lePhone.setText('')
-        self.f_add.leMail.setText('')
-        self.f_add.leNote.setText('')
-        self.f_add.show()
+        self.f_add.leId.setText('')  # заносим Id в виджет-метку в виде пустой строки
+        self.f_add.leName.setText('')  # заносим Имя в виджет-метку в виде пустой строки
+        self.f_add.leFamily.setText('')  # заносим Фамилию в виджет-метку в виде пустой строки
+        self.f_add.lePhone.setText('')  # заносим Телефон в виджет-метку в виде пустой строки
+        self.f_add.leMail.setText('')  # заносим майл в виджет-метку в виде пустой строки
+        self.f_add.leNote.setText('')  # заносим заметки в виджет-метку в виде пустой строки
+        self.f_add.show()  # показываем окно
 
     def ev_sel(self):
         sel_items = self.twBook.selectedItems()
