@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>264</width>
+    <width>333</width>
     <height>246</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/edit-icon.png</normaloff>icons/edit-icon.png</iconset>
   </property>
   <property name="whatsThis">
    <string notr="true"/>
@@ -147,6 +151,16 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>leName</tabstop>
+  <tabstop>leFamily</tabstop>
+  <tabstop>lePhone</tabstop>
+  <tabstop>leMail</tabstop>
+  <tabstop>leNote</tabstop>
+  <tabstop>pbOk</tabstop>
+  <tabstop>pbCansel</tabstop>
+  <tabstop>leId</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
