@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/91848.png</file>
+    <file>icons/3640873.png</file>
+    <file>icons/add.png</file>
+    <file>icons/adress1.png</file>
+    <file>icons/delete-icon-1.png</file>
+    <file>icons/edit-icon.png</file>
+    <file>icons/tel.png</file>
+  </qresource>
+</RCC>
