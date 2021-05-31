@@ -14,8 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>icons/edit-icon.png</normaloff>icons/edit-icon.png</iconset>
+   <iconset resource="res.qrc">
+    <normaloff>:/icons/icons/edit-icon.png</normaloff>:/icons/icons/edit-icon.png</iconset>
   </property>
   <property name="whatsThis">
    <string notr="true"/>
@@ -161,7 +161,9 @@
   <tabstop>pbCansel</tabstop>
   <tabstop>leId</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>pbCansel</sender>

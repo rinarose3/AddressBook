@@ -14,8 +14,8 @@
    <string>Адресная книга</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>icons/adress1.png</normaloff>icons/adress1.png</iconset>
+   <iconset resource="res.qrc">
+    <normaloff>:/icons/icons/adress1.png</normaloff>:/icons/icons/adress1.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -62,8 +62,8 @@
         <set>AlignCenter</set>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>icons/tel.png</normaloff>icons/tel.png</iconset>
+        <iconset resource="res.qrc">
+         <normaloff>:/icons/icons/tel.png</normaloff>:/icons/icons/tel.png</iconset>
        </property>
       </column>
       <column>
@@ -74,8 +74,8 @@
         <set>AlignCenter</set>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>icons/91848.png</normaloff>icons/91848.png</iconset>
+        <iconset resource="res.qrc">
+         <normaloff>:/icons/icons/91848.png</normaloff>:/icons/icons/91848.png</iconset>
        </property>
       </column>
       <column>
@@ -86,8 +86,8 @@
         <set>AlignCenter</set>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>icons/3640873.png</normaloff>icons/3640873.png</iconset>
+        <iconset resource="res.qrc">
+         <normaloff>:/icons/icons/3640873.png</normaloff>:/icons/icons/3640873.png</iconset>
        </property>
       </column>
      </widget>
@@ -134,8 +134,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>icons/add.png</normaloff>icons/add.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/add.png</normaloff>:/icons/icons/add.png</iconset>
    </property>
    <property name="text">
     <string>Добавить</string>
@@ -149,8 +149,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>icons/edit-icon.png</normaloff>icons/edit-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/edit-icon.png</normaloff>:/icons/icons/edit-icon.png</iconset>
    </property>
    <property name="text">
     <string>Изменить</string>
@@ -164,8 +164,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>icons/delete-icon-1.png</normaloff>icons/delete-icon-1.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/delete-icon-1.png</normaloff>:/icons/icons/delete-icon-1.png</iconset>
    </property>
    <property name="text">
     <string>Удалить</string>
@@ -175,6 +175,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -2,7 +2,6 @@
 import sqlite3 as ql  # для взаимодействия с БД SQLite
 import sys  # для работы с интепритатором Python
 from PyQt5 import QtWidgets as qw  # для GUI
-from PyQt5 import uic  # для конвертации разметки GUI
 import MainForm as mf
 import fmCh
 
@@ -10,7 +9,6 @@ import fmCh
 class TABook(qw.QMainWindow, mf.Ui_MainWindow):  # создание класса TABook от класса QMainWindow
     def __init__(self):  # конструктор моего класса
         super().__init__()  # вызов конструктора родителя
-#        uic.loadUi('MainForm.ui', self)  # конвертация разметки формы (ui) в поля и методы моего класса
         self.setupUi(self)
         self.ad = TfmCh()  # Создаем форму для изменений
         self.ad.setWindowTitle('Изменение записи')  # задаю заголовок формы-изменения
@@ -34,7 +32,7 @@ class TABook(qw.QMainWindow, mf.Ui_MainWindow):  # создание класса
             is_bd = False
             if len(recs):
                 if recs[0][0]:
-                   is_bd = True
+                    is_bd = True
 
             if not is_bd:
                 cur.execute('create table "address_book" ('
@@ -58,7 +56,7 @@ class TABook(qw.QMainWindow, mf.Ui_MainWindow):  # создание класса
 
             self.twBook.clear()  # очистка виджета-списка
 
-            colsWidth = (0, 70, 160, 120, 200)  # картеж ширины столбцов
+            colsWidth = (0, 90, 100, 140, 170)  # картеж ширины столбцов
             for i in range(5):  # цикл выборки (по элементам списка)
                 self.twBook.setColumnWidth(i, colsWidth[i])  # задание ширины столбцов
 
@@ -128,7 +126,6 @@ class TABook(qw.QMainWindow, mf.Ui_MainWindow):  # создание класса
 class TfmCh(qw.QDialog, fmCh.Ui_fmCh):  # создание класса TfmCh от класса QDialog
     def __init__(self):  # конструктор моего класса
         super().__init__()  # вызов конструктора родителя
-#        uic.loadUi("fmCh.ui", self)  # конвертация разметки формы (ui) в поля и методы моего класса
         self.setupUi(self)
         self.pbOk.clicked.connect(self.ev_save)  # связывание сигнала действия-нажатия кнопки ок с моим слотом
         self.sel_item = qw.QTreeWidgetItem()  # создание поля,которое будет ссылаться на выделенную строку главной формы
@@ -165,7 +162,6 @@ class TfmCh(qw.QDialog, fmCh.Ui_fmCh):  # создание класса TfmCh о
 class TfmAdd(qw.QDialog, fmCh.Ui_fmCh):  # создание класса TfmCh от класса QDialog
     def __init__(self):  # конструктор моего класса
         super().__init__()  # вызов конструктора родителя
-#        uic.loadUi("fmCh.ui", self)  # конвертация разметки формы (ui) в поля и методы моего класса
         self.setupUi(self)
         self.pbOk.clicked.connect(self.ev_save)  # связывание сигнала действия-нажатия кнопки ок с моим слотом
         self.tv = qw.QTreeWidget()   # создание поля,которое будет ссылаться на элемент со списком строк главной формы

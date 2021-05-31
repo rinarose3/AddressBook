@@ -16,7 +16,7 @@ class Ui_fmCh(object):
         fmCh.setObjectName("fmCh")
         fmCh.resize(333, 246)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icons/edit-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/edit-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         fmCh.setWindowIcon(icon)
         fmCh.setWhatsThis("")
         fmCh.setModal(True)
@@ -102,3 +102,4 @@ class Ui_fmCh(object):
         self.label.setText(_translate("fmCh", "id"))
         self.pbOk.setText(_translate("fmCh", "ОК"))
         self.pbCansel.setText(_translate("fmCh", "Отмена"))
+import res_rc
